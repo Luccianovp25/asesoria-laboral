@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría en la Inmersión Laboral - Donde empieza tu camino, empieza nuestra guía</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Base styles */
+        .hero-section {
+            background: linear-gradient(135deg, #0b1e74 0%, #0b1e74 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile First - Extra Small devices (phones, 576px and down) */
+        @media (max-width: 575.98px) {
+            .hero-section {
+                padding: 60px 0;
+                text-align: center;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .hero-section .lead {
+                font-size: 1rem;
+            }
+            
+            .hero-section .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .navbar-brand {
+                font-size: 1rem;
+            }
+            
+            .navbar-brand img {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            
+            .display-4 {
+                font-size: 2rem;
+            }
+            
+            .display-5 {
+                font-size: 1.5rem;
+            }
+            
+            .service-icon {
+                font-size: 2rem;
+            }
+            
+            .feature-card {
+                margin-bottom: 20px;
+            }
+            
+            .cta-section {
+                padding: 40px 0;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+            
+            .btn-lg {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .modal-dialog {
+                margin: 10px;
+            }
+            
+            .footer img {
+                width: 25px !important;
+                height: 25px !important;
+            }
+        }
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            
+            .navbar-brand img {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .display-4 {
+                font-size: 2.5rem;
+            }
+            
+            .display-5 {
+                font-size: 1.8rem;
+            }
+            
+            .service-icon {
+                font-size: 2.5rem;
+            }
+            
+            .cta-section {
+                padding: 60px 0;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .hero-section {
+                padding: 90px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 3rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+            
+            .navbar-brand img {
+                width: 55px !important;
+                height: 55px !important;
+            }
+            
+            .display-4 {
+                font-size: 3rem;
+            }
+            
+            .display-5 {
+                font-size: 2rem;
+            }
+            
+            .service-icon {
+                font-size: 2.8rem;
+            }
+            
+            .cta-section {
+                padding: 70px 0;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .hero-section {
+                padding: 100px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 3.5rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.4rem;
+            }
+            
+            .navbar-brand svg {
+                width: 60px !important;
+                height: 60px !important;
+            }
+            
+            .display-4 {
+                font-size: 3.5rem;
+            }
+            
+            .display-5 {
+                font-size: 2.2rem;
+            }
+            
+            .service-icon {
+                font-size: 3rem;
+            }
+            
+            .cta-section {
+                padding: 80px 0;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .hero-section {
+                padding: 120px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 4rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-brand svg {
+                width: 60px !important;
+                height: 60px !important;
+            }
+            
+            .display-4 {
+                font-size: 4rem;
+            }
+            
+            .display-5 {
+                font-size: 2.5rem;
+            }
+            
+            .service-icon {
+                font-size: 3rem;
+            }
+            
+            .cta-section {
+                padding: 80px 0;
+            }
+        }
+
+        /* Landscape orientation adjustments */
+        @media (orientation: landscape) and (max-height: 500px) {
+            .hero-section {
+                padding: 40px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .lead {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .navbar-brand img,
+            .footer img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .feature-card:hover {
+                transform: none;
+            }
+            
+            .btn-primary:hover {
+                transform: none;
+            }
+            
+            .btn {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .nav-link {
+                padding: 12px 16px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .navbar,
+            .btn,
+            .modal,
+            footer {
+                display: none !important;
+            }
+            
+            .hero-section {
+                background: white !important;
+                color: black !important;
+                padding: 20px 0;
+            }
+            
+            .cta-section {
+                background: white !important;
+                padding: 20px 0;
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            .feature-card,
+            .btn-primary {
+                transition: none;
+            }
+            
+            .feature-card:hover {
+                transform: none;
+            }
+            
+            .btn-primary:hover {
+                transform: none;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .bg-light {
+                background-color: #343a40 !important;
+                color: white !important;
+            }
+            
+            .text-muted {
+                color: #adb5bd !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="me-3">
+                    <img src="logo.jpg" alt="Asesoría en la Inmersión Laboral" style="width: 60px; height: 60px; object-fit: contain;">
+                </div>
+                <div class="d-none d-md-block">
+                    <div class="fw-bold text-dark" style="font-size: 1.2rem; line-height: 1.1; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+                        ASESORÍA EN LA<br>
+                        <span style="color: #0b1e74;">INMERSIÓN LABORAL</span>
+                    </div>
+                    <div class="text-muted" style="font-size: 0.7rem; font-style: italic;">
+                        Donde empieza tu camino, empieza nuestra guía
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="fw-bold text-dark" style="font-size: 0.9rem; line-height: 1.1;">
+                        ASESORÍA EN LA<br>
+                        <span style="color: #0b1e74;">INMERSIÓN LABORAL</span>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#derechos">Derechos Básicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#como-funciona">Cómo Funciona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Conoce y Defiende tus Derechos Laborales
+                    </h1>
+                    <p class="lead mb-4">
+                        Te ayudamos a entender tus derechos en el trabajo, desde contratos y licencias hasta horas extras y seguridad social. 
+                        Asesoría personalizada y gratuita para trabajadores.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#como-funciona" class="btn btn-light btn-lg">
+                            <i class="bi bi-play-circle me-2"></i>
+                            Cómo Funciona
+                        </a>
+                        <a href="#contacto" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-envelope me-2"></i>
+                            Consultar
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 text-center">
+                    <div class="d-none d-lg-block">
+                        <i class="bi bi-people-fill" style="font-size: 15rem; opacity: 0.3;"></i>
+                    </div>
+                    <div class="d-lg-none">
+                        <i class="bi bi-people-fill" style="font-size: 8rem; opacity: 0.3;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Nuestros Servicios</h2>
+                    <p class="lead text-muted">
+                        Te brindamos información clara y asesoría personalizada sobre todos los aspectos de tus derechos laborales
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-file-earmark-text service-icon"></i>
+                            <h5 class="card-title">Contratos de Trabajo</h5>
+                            <p class="card-text">
+                                Te explicamos los tipos de contratos, cláusulas importantes y qué debes revisar antes de firmar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-calendar-check service-icon"></i>
+                            <h5 class="card-title">Licencias y Vacaciones</h5>
+                            <p class="card-text">
+                                Conoce tus derechos sobre licencias por enfermedad, maternidad, paternidad y vacaciones anuales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-clock service-icon"></i>
+                            <h5 class="card-title">Horarios y Horas Extras</h5>
+                            <p class="card-text">
+                                Entiende la normativa sobre jornada laboral, horas extras y descansos obligatorios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-shield-check service-icon"></i>
+                            <h5 class="card-title">Seguridad Social</h5>
+                            <p class="card-text">
+                                Información sobre BPS, CT, aportes patronales y beneficios de la seguridad social.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-cash-coin service-icon"></i>
+                            <h5 class="card-title">Salarios y Beneficios</h5>
+                            <p class="card-text">
+                                Conoce sobre salarios mínimos, aguinaldo, bonificaciones y otros beneficios laborales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-gavel service-icon"></i>
+                            <h5 class="card-title">Conflictos Laborales</h5>
+                            <p class="card-text">
+                                Te orientamos en caso de despidos, suspensiones o cualquier conflicto en el trabajo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="cta-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">¿Quiénes Somos?</h2>
+                    <p class="lead mb-4">
+                        Este trabajo fue elaborado por estudiantes de tercer año de E.M.T en Administración de la Escuela Técnica de Tala, como parte del proyecto final de egreso. El objetivo principal es aplicar los conocimientos adquiridos durante el Bachillerato, a través del desarrollo de un plan de negocios. 
+                    </p>
+                    <p class="mb-4">
+                        Nuestra misión es brindar información clara, accesible y gratuita para que todos los trabajadores conozcan sus derechos y puedan defenderlos efectivamente.
+                    </p>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <h3 class="fw-bold text-primary">100%</h3>
+                            <p class="text-muted">Gratuito</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-primary">24/7</h3>
+                            <p class="text-muted">Disponible</p>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold text-primary">1000+</h3>
+                            <p class="text-muted">Casos Ayudados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="bi bi-heart-fill" style="font-size: 10rem; color: #667eea; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Whom Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">¿Para Quién Es Esto?</h2>
+                    <p class="lead text-muted">
+                        Nuestro servicio está diseñado para todos los trabajadores que necesitan orientación sobre sus derechos laborales
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-person-badge service-icon"></i>
+                            <h5 class="card-title">Trabajadores Nuevos</h5>
+                            <p class="card-text">
+                                Si acabas de conseguir tu primer trabajo o estás por firmar un contrato, te ayudamos a entender tus derechos desde el inicio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-people service-icon"></i>
+                            <h5 class="card-title">Trabajadores en Actividad</h5>
+                            <p class="card-text">
+                                Si ya tienes trabajo pero tienes dudas sobre licencias, horas extras, salarios o cualquier aspecto de tu relación laboral.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-exclamation-triangle service-icon"></i>
+                            <h5 class="card-title">Trabajadores con Problemas</h5>
+                            <p class="card-text">
+                                Si estás enfrentando un conflicto laboral, despido, suspensión o cualquier situación que afecte tus derechos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="bi bi-question-circle service-icon"></i>
+                            <h5 class="card-title">Cualquier Trabajador</h5>
+                            <p class="card-text">
+                                Si simplemente quieres informarte y conocer mejor tus derechos laborales para estar preparado ante cualquier situación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="bg-light p-4 rounded">
+                        <h4 class="text-primary mb-3">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Importante
+                        </h4>
+                        <p class="mb-0">
+                            <strong>Nuestro servicio es completamente gratuito</strong> y está disponible para todos los trabajadores, 
+                            sin importar su situación laboral, antigüedad o tipo de contrato. 
+                            No necesitas ser cliente de ningún sindicato ni organización para recibir nuestra asesoría.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Basic Rights Section -->
+    <section id="derechos" class="cta-section">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Derechos Laborales Básicos</h2>
+                    <p class="lead text-muted">
+                        Conoce los derechos fundamentales que todo trabajador debe conocer y defender
+                    </p>
+                </div>
+            </div>
+            
+            <!-- CT - Caja de Jubilaciones -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-bank2 text-primary me-3" style="font-size: 2rem;"></i>
+                                <h4 class="mb-0">Caja de Jubilaciones (CT)</h4>
+                            </div>
+                            <p class="text-muted mb-3">Sistema de jubilación y pensiones para trabajadores del sector privado.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Edad de jubilación:</strong> 60 años (hombres) / 55 años (mujeres)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Aportes:</strong> 15% del salario (7.5% trabajador + 7.5% empleador)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Jubilación mínima:</strong> 2 BPC (Base de Prestaciones y Contribuciones)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Pensión por invalidez:</strong> Disponible en caso de incapacidad total</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Pensión a sobrevivientes:</strong> Para familiares en caso de fallecimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BPS - Banco de Previsión Social -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-shield-check text-primary me-3" style="font-size: 2rem;"></i>
+                                <h4 class="mb-0">Banco de Previsión Social (BPS)</h4>
+                            </div>
+                            <p class="text-muted mb-3">Seguridad social integral para todos los trabajadores.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Cobertura:</strong> Salud, maternidad, invalidez, vejez y muerte</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Aportes:</strong> 15% del salario (7% trabajador + 8% empleador)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Asignaciones familiares:</strong> Para trabajadores con hijos menores de 18 años</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Seguro de desempleo:</strong> Hasta 6 meses de cobertura</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Seguro de enfermedad:</strong> Cobertura médica integral</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Licencias y Vacaciones -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-calendar-check text-primary me-3" style="font-size: 2rem;"></i>
+                                <h4 class="mb-0">Licencias y Permisos</h4>
+                            </div>
+                            <p class="text-muted mb-3">Derechos a ausencias justificadas con goce de salario.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Licencia por enfermedad:</strong> Hasta 6 meses con goce de salario</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Licencia por maternidad:</strong> 14 semanas (6 antes + 8 después del parto)</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Licencia por paternidad:</strong> 10 días corridos</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Licencia por duelo:</strong> 3 días por fallecimiento de familiar directo</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Licencia por estudio:</strong> Hasta 20 días hábiles por año</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Licencia por matrimonio:</strong> 5 días corridos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vacaciones -->
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-umbrella-beach text-primary me-3" style="font-size: 2rem;"></i>
+                                <h4 class="mb-0">Vacaciones Anuales</h4>
+                            </div>
+                            <p class="text-muted mb-3">Derecho a descanso anual remunerado.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Duración:</strong> 20 días hábiles por año de trabajo</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Salario:</strong> 100% del salario normal</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Acumulación:</strong> Se pueden acumular hasta 2 años</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Pago:</strong> Se debe pagar antes del inicio de las vacaciones</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Indemnización:</strong> Por vacaciones no gozadas al finalizar la relación laboral</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Prohibición:</strong> No se puede renunciar a las vacaciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horarios y Jornada Laboral -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-clock text-primary me-3" style="font-size: 2rem;"></i>
+                                <h4 class="mb-0">Jornada Laboral y Horas Extras</h4>
+                            </div>
+                            <p class="text-muted mb-3">Normativa sobre horarios de trabajo y compensación por horas adicionales.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary mb-3"><i class="bi bi-calendar-week me-2"></i>Jornada Normal</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Duración:</strong> 8 horas diarias, 44 horas semanales</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Descanso semanal:</strong> 36 horas continuas (generalmente sábado tarde y domingo)</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Descanso diario:</strong> Mínimo 8 horas entre jornadas</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Pausa para almuerzo:</strong> Mínimo 1 hora (no computable como trabajo)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary mb-3"><i class="bi bi-clock-history me-2"></i>Horas Extras</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Límite:</strong> Máximo 4 horas extras por día</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Pago:</strong> 100% adicional (doble salario)</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Acuerdo previo:</strong> Debe ser por mutuo acuerdo</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Compensación:</strong> Se puede compensar con tiempo libre</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Prohibición:</strong> No se pueden exigir horas extras a menores de 18 años</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información Adicional -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="bg-primary text-white p-4 rounded">
+                        <h4 class="mb-3">
+                            <i class="bi bi-lightbulb me-2"></i>
+                            ¿Necesitas más información?
+                        </h4>
+                        <p class="mb-3">
+                            Esta es solo una guía básica. Cada situación laboral puede tener particularidades específicas. 
+                            Te recomendamos consultar con nuestro equipo para obtener asesoría personalizada sobre tu caso.
+                        </p>
+                        <a href="#contacto" class="btn btn-light btn-lg">
+                            <i class="bi bi-chat-dots me-2"></i>
+                            Consultar mi Caso
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="como-funciona" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">¿Cómo Funciona?</h2>
+                    <p class="lead text-muted">
+                        Obtén asesoría personalizada en solo 3 simples pasos
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <h3 class="mb-0">1</h3>
+                    </div>
+                    <h5>Describe tu Situación</h5>
+                    <p class="text-muted">
+                        Cuéntanos brevemente tu consulta o situación laboral a través de nuestro formulario de contacto.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <h3 class="mb-0">2</h3>
+                    </div>
+                    <h5>Recibe Orientación</h5>
+                    <p class="text-muted">
+                        Nuestro equipo te responderá con información específica y orientación personalizada sobre tu caso.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <h3 class="mb-0">3</h3>
+                    </div>
+                    <h5>Actúa con Confianza</h5>
+                    <p class="text-muted">
+                        Con la información recibida, podrás tomar decisiones informadas y defender tus derechos laborales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-4">¿Tienes una Consulta?</h2>
+                    <p class="lead mb-5">
+                        No dudes en contactarnos. Estamos aquí para ayudarte con cualquier duda sobre tus derechos laborales.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-envelope-fill text-primary mb-3" style="font-size: 2rem;"></i>
+                                    <h5>Envíanos un Email</h5>
+                                    <p class="text-muted">consulta@asesorialaboral.com</p>
+                                    <a href="mailto:consulta@asesorialaboral.com" class="btn btn-primary">
+                                        Escribir Email
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-chat-dots-fill text-primary mb-3" style="font-size: 2rem;"></i>
+                                    <h5>Formulario de Contacto</h5>
+                                    <p class="text-muted">Completa nuestro formulario online</p>
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                        Abrir Formulario
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                     <h5 class="d-flex align-items-center">
+                                         <div class="me-2">
+                    <img src="logo.jpg" alt="Asesoría en la Inmersión Laboral" style="width: 35px; height: 35px; object-fit: contain;">
+                </div>
+                         Asesoría en la Inmersión Laboral
+                     </h5>
+                    <p class="text-muted">Donde empieza tu camino, empieza nuestra guía.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">
+                        © 2024 Asesoría en la Inmersión Laboral. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Formulario de Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label">Nombre completo *</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="telefono" class="form-label">Teléfono (opcional)</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="ciudad" class="form-label">Ciudad (opcional)</label>
+                                <input type="text" class="form-control" id="ciudad" name="ciudad">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto de la consulta *</label>
+                            <select class="form-select" id="asunto" name="asunto" required>
+                                <option value="">Selecciona un tema</option>
+                                <option value="contrato">Contrato de trabajo</option>
+                                <option value="licencias">Licencias y vacaciones</option>
+                                <option value="horarios">Horarios y horas extras</option>
+                                <option value="seguridad">Seguridad social</option>
+                                <option value="salarios">Salarios y beneficios</option>
+                                <option value="conflicto">Conflicto laboral</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Describe tu consulta *</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos tu situación laboral de manera detallada..." required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="privacidad" name="privacidad" required>
+                                <label class="form-check-label" for="privacidad">
+                                    Acepto que mis datos sean tratados según la <a href="#" class="text-primary">política de privacidad</a> *
+                                </label>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="spinner-border spinner-border-sm d-none me-2" id="submitSpinner"></span>
+                                Enviar Consulta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">
+                        <i class="bi bi-check-circle me-2"></i>
+                        Consulta Enviada
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="bi bi-envelope-check text-success mb-3" style="font-size: 3rem;"></i>
+                    <h5>¡Gracias por contactarnos!</h5>
+                    <p class="text-muted">
+                        Hemos recibido tu consulta y nos pondremos en contacto contigo en las próximas 24-48 horas.
+                    </p>
+                    <p class="text-muted small">
+                        Si tu consulta es urgente, también puedes escribirnos directamente a:<br>
+                        <strong>consulta@asesorialaboral.com</strong>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Error al Enviar
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="bi bi-x-circle text-danger mb-3" style="font-size: 3rem;"></i>
+                    <h5>No se pudo enviar tu consulta</h5>
+                    <p class="text-muted">
+                        Ha ocurrido un error técnico. Por favor, intenta nuevamente o contáctanos directamente por email.
+                    </p>
+                    <p class="text-muted small">
+                        Email directo: <strong>consulta@asesorialaboral.com</strong>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="mailto:consulta@asesorialaboral.com" class="btn btn-primary">
+                        <i class="bi bi-envelope me-2"></i>
+                        Escribir Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Contact Form JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const submitSpinner = document.getElementById('submitSpinner');
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                            bsCollapse.hide();
+                        }
+                    }
+                });
+            });
+            
+            // Add active class to navigation links on scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Touch device optimizations
+            if ('ontouchstart' in window) {
+                // Add touch feedback to cards
+                document.querySelectorAll('.feature-card').forEach(card => {
+                    card.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+                    
+                    card.addEventListener('touchend', function() {
+                        this.style.transform = '';
+                    });
+                });
+                
+                // Improve button touch targets
+                document.querySelectorAll('.btn').forEach(btn => {
+                    btn.style.minHeight = '44px';
+                    btn.style.minWidth = '44px';
+                });
+            }
+            
+            // Responsive image loading
+            const logoImages = document.querySelectorAll('img[src="logo.jpg"]');
+            logoImages.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                
+                img.addEventListener('error', function() {
+                    this.style.display = 'none';
+                    console.warn('Logo image failed to load');
+                });
+            });
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Mostrar spinner y deshabilitar botón
+                submitSpinner.classList.remove('d-none');
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+                
+                // Obtener datos del formulario
+                const formData = new FormData(contactForm);
+                const data = {
+                    nombre: formData.get('nombre'),
+                    email: formData.get('email'),
+                    telefono: formData.get('telefono'),
+                    ciudad: formData.get('ciudad'),
+                    asunto: formData.get('asunto'),
+                    mensaje: formData.get('mensaje'),
+                    privacidad: formData.get('privacidad')
+                };
+                
+                // Simular envío (en producción, aquí iría la llamada real al servidor)
+                setTimeout(() => {
+                    // Ocultar spinner y restaurar botón
+                    submitSpinner.classList.add('d-none');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Enviar Consulta';
+                    
+                    // Cerrar modal de contacto
+                    const contactModal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+                    contactModal.hide();
+                    
+                    // Mostrar modal de éxito
+                    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                    successModal.show();
+                    
+                    // Limpiar formulario
+                    contactForm.reset();
+                    
+                    // Enviar email real (opción 1: usando EmailJS)
+                    sendEmail(data);
+                    
+                }, 2000);
+            });
+            
+            // Función para enviar email usando EmailJS (requiere configuración)
+            function sendEmail(data) {
+                // Opción 1: EmailJS (gratuito hasta 200 emails/mes)
+                if (typeof emailjs !== 'undefined') {
+                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                        from_name: data.nombre,
+                        from_email: data.email,
+                        from_phone: data.telefono || 'No proporcionado',
+                        from_city: data.ciudad || 'No proporcionado',
+                        subject: data.asunto,
+                        message: data.mensaje
+                    }, 'YOUR_USER_ID')
+                    .then(function(response) {
+                        console.log('Email enviado exitosamente:', response);
+                    }, function(error) {
+                        console.error('Error al enviar email:', error);
+                        showErrorModal();
+                    });
+                }
+                
+                // Opción 2: Formspree (gratuito hasta 50 submissions/mes)
+                // El formulario se enviaría automáticamente a Formspree
+                
+                // Opción 3: Netlify Forms (gratuito)
+                // El formulario se enviaría automáticamente a Netlify
+            }
+            
+            function showErrorModal() {
+                const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                errorModal.show();
+            }
+            
+            // Validación en tiempo real
+            const inputs = contactForm.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.classList.add('is-invalid');
+                    } else {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                    }
+                });
+                
+                input.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- EmailJS (opcional - descomenta si quieres usar EmailJS) -->
+    <!--
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_USER_ID");
+        })();
+    </script>
+    -->
+</body>
+</html>
